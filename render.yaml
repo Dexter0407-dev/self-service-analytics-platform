@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: self-service-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile.backend
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATA_STORAGE_DIR
+        value: /app/storage
+      - key: MAX_UPLOAD_MB
+        value: "50"
+      - key: STORAGE_BACKEND
+        value: local
+      - key: CORS_ORIGINS
+        sync: false   # set manually in Render dashboard (your Vercel URL)
+    disk:
+      name: storage
+      mountPath: /app/storage
+      sizeGB: 1

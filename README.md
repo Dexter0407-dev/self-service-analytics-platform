@@ -2,6 +2,28 @@
 
 A no-code AutoML platform. Upload a CSV, clean your data, explore it, train a model, and get predictions — all through an interactive UI.
 
+## 🚀 Live Demo
+
+| | URL |
+|---|---|
+| **Frontend** | https://self-service-analytics-platform.vercel.app |
+| **Backend API** | https://self-service-backend-k1s2.onrender.com |
+| **Health Check** | https://self-service-backend-k1s2.onrender.com/health |
+
+> **Note:** Backend is hosted on Render's free tier — first request after inactivity may take ~30 seconds to wake up.
+
+## ✨ Features
+
+- 📂 **Drag & drop CSV upload** — max 50 MB, automatic validation
+- 🧹 **Smart data cleaning** — handle missing values, encode categoricals, remove outliers
+- 🔍 **Automated EDA** — column stats, null counts, outlier detection, data preview
+- 🤖 **AutoML training** — compares 3 models (RandomForest, XGBoost, LogisticRegression/LinearRegression), picks best via cross-validation
+- 📊 **Interactive results** — metrics, feature importance bar chart (Recharts), sample predictions
+- ⚡ **Live predictions** — run new predictions with the trained model
+- 🎨 **5-step guided workflow** — clear progression from upload to results
+- 🐳 **Fully containerized** — Docker + Docker Compose for local dev
+- 🚀 **CI/CD ready** — GitHub Actions pipeline for automated deployment
+
 ## Architecture
 
 ```
